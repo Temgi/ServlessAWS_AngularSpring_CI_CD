@@ -36,7 +36,7 @@ public class ProdutoController {
 		return new ResponseEntity<Produto>(novoProduto, HttpStatus.CREATED);
 	}
 	
-	@DeleteMapping("{/id}")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> excluir(@PathVariable Long id){
 		produtoService.delete(id);
 		return ResponseEntity.ok().build();

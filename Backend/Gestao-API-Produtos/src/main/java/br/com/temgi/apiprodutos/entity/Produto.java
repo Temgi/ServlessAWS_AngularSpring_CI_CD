@@ -1,7 +1,12 @@
 package br.com.temgi.apiprodutos.entity;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Produto {
@@ -18,7 +23,7 @@ public class Produto {
 
     @Column
     private String descricao;
-
+    
 	public Long getId() {
 		return id;
 	}
@@ -50,6 +55,5 @@ public class Produto {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-    
     
 }
